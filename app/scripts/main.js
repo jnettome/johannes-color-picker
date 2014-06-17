@@ -9,7 +9,7 @@ initialCircle.attr({
 })
 .data('color', '#bada55')
 .click(function () {
-    // alert(this.data("color"));
+    alert(this.data("color"));
 
     // when user clicks, open pallete
     var colorA = s.circle(80, 100, 80),
@@ -33,5 +33,26 @@ initialCircle.attr({
     // Using masks
     primaryColorsGroup.attr({ mask: this });
     var matrixCircleMask = s.circle(150, 150, 80).attr({ fill: '#fff' });
+
+    colorA.click(function () {
+        this.attr({
+            fill: '#ccc'
+        });
+        colorB.attr({
+            fill: '#333'
+        });
+        colorC.attr({
+            fill: '#999'
+        });
+        colorD.attr({
+            fill: '#000'
+        });
+        colorE.attr({
+            fill: '#8fc'
+        });
+        colorF.attr({
+            fill: '#c0f'
+        });
+    });
 
 });
